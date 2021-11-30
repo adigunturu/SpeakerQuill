@@ -443,8 +443,12 @@ const Home = () => {
 
             //console.log(editor.element.children[posNum])
         } else {
-            localStorage.setItem("dom", '<h1><!--block--><strong>Welcome to </strong><a href="https://adigunturu.com/SpeakerQuill"><strong>SpeakerQuill</strong></a><strong>!&nbsp;</strong></h1><br>');
-            editor.insertHTML('<h1><!--block--><strong>Welcome to </strong><a href="https://adigunturu.com/SpeakerQuill"><strong>SpeakerQuill</strong></a><strong>!&nbsp;</strong></h1><br>');
+            localStorage.setItem("dom", `
+            <h1><!--block--><strong>Welcome to </strong><a href="https://adigunturu.com/SpeakerQuill"><strong>SpeakerQuill</strong></a><strong>!&nbsp;</strong></h1><h3><!--block-->Styling</h3><div><!--block-->🗣 "Bold": <strong>Makes text bold<br></strong>🗣 "Italic": <em>Makes text Italic<br></em>🗣 "Underline": <u>Adds underline to the selected text</u></div><h2><!--block-->🗣 "Heading": Makes selected section into a H2 block</h2><pre><!--block-->🗣  "Code block": Turns selected section into a code block</pre><blockquote><!--block-->&nbsp;🗣 "Make it a Quote": Turns selected section into a quote</blockquote><h3><!--block-->Punctuation</h3><div><!--block-->🗣 "End of sentence": Adds a full stop.<br>🗣 "question mark": Adds a question mark.<br>🗣 "comma": Adds a comma.</div>
+            `);
+            editor.insertHTML(`
+            <h1><!--block--><strong>Welcome to </strong><a href="https://adigunturu.com/SpeakerQuill"><strong>SpeakerQuill</strong></a><strong>!&nbsp;</strong></h1><h3><!--block-->Styling</h3><div><!--block-->🗣 "Bold": <strong>Makes text bold<br></strong>🗣 "Italic": <em>Makes text Italic<br></em>🗣 "Underline": <u>Adds underline to the selected text</u></div><h2><!--block-->🗣 "Heading": Makes selected section into a H2 block</h2><pre><!--block-->🗣  "Code block": Turns selected section into a code block</pre><blockquote><!--block-->&nbsp;🗣 "Make it a Quote": Turns selected section into a quote</blockquote><h3><!--block-->Punctuation</h3><div><!--block-->🗣 "End of sentence": Adds a full stop.<br>🗣 "question mark": Adds a question mark.<br>🗣 "comma": Adds a comma.</div>
+            `);
             localStorage.setItem("curPos", 27);
             editor.setSelectedRange([27, 27]);
             setcurrCursorPos([27, 27]);
